@@ -1,0 +1,909 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mont",
+				"month_balance"
+			],
+			[
+				"station",
+				"station_num-1"
+			],
+			[
+				"event",
+				"eventTest"
+			],
+			[
+				"quic",
+				"quickSortPartion"
+			],
+			[
+				"Web",
+				"WebSocketSite"
+			],
+			[
+				"list",
+				"listRight"
+			],
+			[
+				"mer",
+				"mergeList"
+			],
+			[
+				"Merg",
+				"mergeList"
+			],
+			[
+				"me",
+				"mergeList"
+			],
+			[
+				"lis",
+				"listRight"
+			],
+			[
+				"sort",
+				"sortedStr"
+			],
+			[
+				"__M",
+				"__MergeSortRecursion"
+			],
+			[
+				"Li",
+				"listRight"
+			],
+			[
+				"listLe",
+				"listLeft"
+			],
+			[
+				"so",
+				"sortedlist"
+			],
+			[
+				"un",
+				"unsortedStr"
+			],
+			[
+				"__Q",
+				"__QuickSortRecursion"
+			],
+			[
+				"unso",
+				"unsortedList"
+			],
+			[
+				"to",
+				"toIndex"
+			],
+			[
+				"tmp",
+				"tmpIndex"
+			],
+			[
+				"sorted",
+				"sortedStr"
+			],
+			[
+				"resu",
+				"result"
+			],
+			[
+				"ChatP",
+				"ChatProtocolFactory"
+			],
+			[
+				"proto",
+				"protocol"
+			],
+			[
+				"send",
+				"sendLine"
+			],
+			[
+				"p_no",
+				"p_node_value"
+			],
+			[
+				"buildB",
+				"buildBTreeByList"
+			],
+			[
+				"tree",
+				"tree_item"
+			],
+			[
+				"self",
+				"self"
+			],
+			[
+				"if",
+				"ifmain	if __name__ == '__main__'"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "1003.c",
+			"settings":
+			{
+				"buffer_size": 2053,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ronghuihe/Library/Application Support/Sublime Text 2/Packages/GoSublime/USAGE.md",
+			"settings":
+			{
+				"buffer_size": 8539,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "1004.c",
+			"settings":
+			{
+				"buffer_size": 1580,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "1002.c",
+			"settings":
+			{
+				"buffer_size": 4305,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Charter\nCharter阶段对SE来说最重要的是评估需求。当然还有关键技术分析的工作，但一般立项的时间也就一两个月而已，投入技术的人力也不多，这种工作这时候放在这个阶段做明显晚了，即使要做也很肤浅，预研/穿刺的动作应该提前一个版本考虑。\n需要评估的需求包括两个方面。一个是写在包需求里的需求，二是包需求之外的需求。\n写在包需求里的需求最好理解，逐条澄清不要遗漏即可。\n包需求之外的需求，有些可能会涉及比较多的测试工作量，比如开放性、版本配套关系和收编计划、产品认证、公司质量要求等等，这些虽然没写在包需求，但是会在charter里体现，带来的工作量也需要考虑。\n另外一大块例行的工作，我理解也是一种需求，例如旧版本问题单和需求同步（最好看一下旧版本需求落地计划）、安全问题排查（可根据日常的数据估算新版本期间会有多少问题）、开源漏洞整改、二进制溯源等，带来的工作量也不是一点两点。如果可能，还需要考虑前一个版本遗留的设计缺陷，是否需要通过负向需求的方式纠正\n本次版本认证和产品线安全要求带来了很多工作量，charter评估的时候都没有考虑到。另外C02版本持续不断的有问题单和需求要合入，这些也是在评估时没有考虑的\n评估的方法：个人觉得最好直接对需求进行场景分析\n评估需求有三点需要注意：\n1.能给出规格的要求给出规格，包括功能规格和性能规格，功能规格如兼容哪几种款型的设备，支持哪几种协议，支持哪几种硬件设备等；性能规格则是如达到何种准确率、误报率，或最大支持多少用户进行此类操作等。一些暂时给不出规格的，最好列个风险，工作量留出一定裕量以便摊给后续优化\n2.最好让开发测试都参与进来澄清，尤其是测试，因为一个人的理解可能有局限性，某些需求看似合理，但放在一些场景里根本就没用，或者没法用，或者之前版本的某个缺陷会导致这一需求实现十分困难，这些都是光靠SE一人难以把握好的，测试考虑异常场景比较有经验，而且对以前版本留下的坑也比较了解，大家一起头脑风暴一下可能对需求有更好的理解，另外，和其他产品配合的需求，可以拉上其他产品的同事一起评估下，例如这次告警联动录像质量调整的特性，没有考虑到新版IPC无法支持，导致最后被砍掉。风险暴露到前面，工作量的评估也会更靠谱。\n3.不能仅从需求字面上考虑，还需要充分考虑质量属性，如可服务性、版本兼容性、安全性和第三方软件可获得性要求。可服务性：涉及到界面操作的，最好能理出整个业务从无到有的流程，不光是如何操作，还有如何配置，如何进行故障定位与恢复等；版本兼容性：是否能从旧版本升级上来？版本升级的兼容性重点可以考虑录像数据、外部接口（eSDK或Onvif等）、升级脚本、界面（不同款型/硬件形态是否要兼容）；安全性：如果新增模块，需要考虑与其他模块之间的通信安全、端口控制得当，如果涉及敏感信息，需要考虑加密手段；第三方软件可获得性：在初步拟订实现方案时，需要考虑是否涉及第三方软件（公司的或开源的），能否获得，能否满足公司二进制溯源要求等\n总之MKT的澄清只能体现需求内容的一小部分，如同冰山，水面以下的部分往往是大头，还需经验。这类经验需要深入开发底层，亲身经历公司开发过程中的种种问题才有较好的体验，我前两年长期务虚，很多底层的细节不熟悉，过程中也挖了不少坑。这应该也是公司需要从底层选拔骨干的原因。",
+			"settings":
+			{
+				"buffer_size": 1378,
+				"line_ending": "Unix",
+				"name": "Charter"
+			}
+		},
+		{
+			"file": "/Users/ronghuihe/Documents/code/lordofpomelo-master/game-server/devtools_agent_page/ViewportControl.js",
+			"settings":
+			{
+				"buffer_size": 5045,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Go Build/Go.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/ronghuihe/Library/Application Support/Sublime Text 2/Packages/GoSublime/USAGE.md",
+		"/Users/ronghuihe/Documents/code/practice/poj/1001.c",
+		"/Users/ronghuihe/Documents/code/coastline-server/coastline-server-go/src/server_main/server.go",
+		"/Users/ronghuihe/Library/Application Support/Sublime Text 2/Packages/GoSublime/CHANGELOG.md",
+		"/Users/ronghuihe/Documents/code/practice/libuv-test/server.c",
+		"/Users/ronghuihe/Documents/code/practice/algorithm/dynamic-programming.py",
+		"/Users/ronghuihe/Documents/code/pyuv-pyuv-0.11.5/examples/test.py",
+		"/Users/ronghuihe/Documents/code/practice/algorithm/hrh-sort.py",
+		"/Users/ronghuihe/Documents/code/pyuv-pyuv-0.11.5/examples/echo-server-tcp.py",
+		"/Users/ronghuihe/Documents/code/practice/algorithm/hrh_algo.h",
+		"/Users/ronghuihe/Documents/games/Atlantis.app/Contents/Scripts/Atlantis.pm",
+		"/Users/ronghuihe/Library/Application Support/Sublime Text 2/Packages/User/c.sublime-build",
+		"/Users/ronghuihe/Documents/games/Atlantis.app/Contents/Scripts/Atlantis.lua",
+		"/Users/ronghuihe/Documents/code/practice/algorithm/hrh-algo.c",
+		"/Users/ronghuihe/Documents/code/practice/algorithm/hrh-algo-c.c",
+		"/Users/ronghuihe/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/ronghuihe/Library/Application Support/Sublime Text 2/Packages/C++/C++.sublime-build",
+		"/Users/ronghuihe/Documents/code/cocos2d-js-v3.0-rc2/HRHProjects/coastline-server/server-main.py",
+		"/Users/ronghuihe/Documents/code/twisted-test/callbacks.py",
+		"/Users/ronghuihe/Documents/code/practice/algorithm/test-binary-tree.py",
+		"/Users/ronghuihe/Documents/code/twisted-test/chatserver.py",
+		"/Users/ronghuihe/Documents/code/practice/python/my_unzip.py",
+		"/Users/ronghuihe/Downloads/CatMazeStarter/Classes/CatSprite.cpp",
+		"/Users/ronghuihe/Downloads/CatMazeStarter/Classes/CatSprite.h",
+		"/Users/ronghuihe/Downloads/CatMazeStarter/Classes/HelloWorldScene.cpp",
+		"/Users/ronghuihe/Documents/code/practice/python/practise1.py",
+		"/Users/ronghuihe/Documents/code/practice/sendfd_test.c",
+		"/Users/ronghuihe/Downloads/software/homebrew-dupes-master/README.md",
+		"/Users/ronghuihe/Documents/code/yavs/test_client/mn_client.py",
+		"/Users/ronghuihe/Documents/code/practice/test.cpp",
+		"/Users/ronghuihe/Documents/code/live/testProgs/testRTSPClient.cpp",
+		"/Users/ronghuihe/Documents/code/yavs/poco-1.4.6p2/XML/samples/DOMParser/src/DOMParser.cpp",
+		"/Users/ronghuihe/Documents/code/cocos2d-x-2.2.1/README.mdown",
+		"/Users/ronghuihe/Documents/book/大数据分析/Spark：Cluster Computing with Working Sets"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			" ",
+			"^                      ",
+			"^                  ",
+			"^            ",
+			"^          ",
+			"^      ",
+			"^  ",
+			"^      ",
+			"^\\s+",
+			"TEST_PORT",
+			"after_write",
+			"uv_last",
+			"after_write",
+			"uv_last_error",
+			"echo_alloc",
+			"uv_buf_init",
+			"echo_alloc",
+			"uv_ip4_addr",
+			"after_read",
+			"echo_alloc",
+			"uv_udp_send",
+			"uv_last_error",
+			"uv_last_error(loop)",
+			"ASSERT (uv_last_error(loop)",
+			"ASSERT (uv_last_error(loop).code",
+			"err.code",
+			"uv_tcp_bind",
+			"uv_ip4_addr",
+			"uv_err_t",
+			"uv_errno_t",
+			"comsumption",
+			"\\t",
+			"tab",
+			"{\n",
+			"count",
+			"moveToward",
+			"positionForTileCoord",
+			"isValidTileCoord",
+			"initWithLayer",
+			"_layer",
+			"tileCoordForPosition",
+			"sockaddr",
+			"Item",
+			"item"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			" ",
+			"                         ",
+			"                        ",
+			"                          ",
+			"                    ",
+			"                      ",
+			"                ",
+			"            ",
+			"        ",
+			"    ",
+			"            ",
+			"^\\s+\\s+",
+			"uv_errno_t",
+			"uv_err_t",
+			"cost",
+			"    ",
+			"self.count",
+			"Node",
+			"node"
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "1003.c",
+					"settings":
+					{
+						"buffer_size": 2053,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1394,
+								1336
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/C++/C.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/ronghuihe/Library/Application Support/Sublime Text 2/Packages/GoSublime/USAGE.md",
+					"settings":
+					{
+						"buffer_size": 8539,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								829,
+								829
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "1004.c",
+					"settings":
+					{
+						"buffer_size": 1580,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1187,
+								1187
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/C++/C.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 66.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "1002.c",
+					"settings":
+					{
+						"buffer_size": 4305,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2513,
+								2455
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 731.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"settings":
+					{
+						"buffer_size": 1378,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1378,
+								1378
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Charter",
+							"codeintel": true,
+							"codeintel_config":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_files_in_project": false,
+									"javascriptExtraPaths":
+									[
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 5.0,
+									"codeintel_scan_files_in_project": false,
+									"phpExtraPaths":
+									[
+									]
+								},
+								"Python":
+								{
+									"env":
+									{
+									}
+								}
+							},
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_live": true,
+							"codeintel_live_enabled_languages":
+							[
+								"JavaScript",
+								"Mason",
+								"XBL",
+								"XUL",
+								"RHTML",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"XSLT",
+								"Django",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Smarty",
+								"Node.js",
+								"Tcl",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							{
+								"JavaScript":
+								[
+									"/build/",
+									"/min/"
+								]
+							},
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+								"PyWin32",
+								"jQuery",
+								"Rails"
+							],
+							"codeintel_snippets": true,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"sublime_auto_complete": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/ronghuihe/Documents/code/lordofpomelo-master/game-server/devtools_agent_page/ViewportControl.js",
+					"settings":
+					{
+						"buffer_size": 5045,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.MarGo-output":
+	{
+		"height": 100.0
+	},
+	"output.exec":
+	{
+		"height": 120.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"untitled"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 175.0,
+	"status_bar_visible": true
+}
