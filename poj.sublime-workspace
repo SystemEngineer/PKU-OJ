@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"out",
+				"output_sets"
+			],
+			[
+				"num",
+				"num_of_sets"
+			],
+			[
 				"mont",
 				"month_balance"
 			],
@@ -128,10 +136,18 @@
 	"buffers":
 	[
 		{
-			"file": "1003.c",
+			"file": "1005.c",
 			"settings":
 			{
-				"buffer_size": 2053,
+				"buffer_size": 2800,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "1050.c",
+			"settings":
+			{
+				"buffer_size": 1775,
 				"line_ending": "Unix"
 			}
 		},
@@ -142,42 +158,9 @@
 				"buffer_size": 8539,
 				"line_ending": "Unix"
 			}
-		},
-		{
-			"file": "1004.c",
-			"settings":
-			{
-				"buffer_size": 1580,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "1002.c",
-			"settings":
-			{
-				"buffer_size": 4305,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "Charter\nCharter阶段对SE来说最重要的是评估需求。当然还有关键技术分析的工作，但一般立项的时间也就一两个月而已，投入技术的人力也不多，这种工作这时候放在这个阶段做明显晚了，即使要做也很肤浅，预研/穿刺的动作应该提前一个版本考虑。\n需要评估的需求包括两个方面。一个是写在包需求里的需求，二是包需求之外的需求。\n写在包需求里的需求最好理解，逐条澄清不要遗漏即可。\n包需求之外的需求，有些可能会涉及比较多的测试工作量，比如开放性、版本配套关系和收编计划、产品认证、公司质量要求等等，这些虽然没写在包需求，但是会在charter里体现，带来的工作量也需要考虑。\n另外一大块例行的工作，我理解也是一种需求，例如旧版本问题单和需求同步（最好看一下旧版本需求落地计划）、安全问题排查（可根据日常的数据估算新版本期间会有多少问题）、开源漏洞整改、二进制溯源等，带来的工作量也不是一点两点。如果可能，还需要考虑前一个版本遗留的设计缺陷，是否需要通过负向需求的方式纠正\n本次版本认证和产品线安全要求带来了很多工作量，charter评估的时候都没有考虑到。另外C02版本持续不断的有问题单和需求要合入，这些也是在评估时没有考虑的\n评估的方法：个人觉得最好直接对需求进行场景分析\n评估需求有三点需要注意：\n1.能给出规格的要求给出规格，包括功能规格和性能规格，功能规格如兼容哪几种款型的设备，支持哪几种协议，支持哪几种硬件设备等；性能规格则是如达到何种准确率、误报率，或最大支持多少用户进行此类操作等。一些暂时给不出规格的，最好列个风险，工作量留出一定裕量以便摊给后续优化\n2.最好让开发测试都参与进来澄清，尤其是测试，因为一个人的理解可能有局限性，某些需求看似合理，但放在一些场景里根本就没用，或者没法用，或者之前版本的某个缺陷会导致这一需求实现十分困难，这些都是光靠SE一人难以把握好的，测试考虑异常场景比较有经验，而且对以前版本留下的坑也比较了解，大家一起头脑风暴一下可能对需求有更好的理解，另外，和其他产品配合的需求，可以拉上其他产品的同事一起评估下，例如这次告警联动录像质量调整的特性，没有考虑到新版IPC无法支持，导致最后被砍掉。风险暴露到前面，工作量的评估也会更靠谱。\n3.不能仅从需求字面上考虑，还需要充分考虑质量属性，如可服务性、版本兼容性、安全性和第三方软件可获得性要求。可服务性：涉及到界面操作的，最好能理出整个业务从无到有的流程，不光是如何操作，还有如何配置，如何进行故障定位与恢复等；版本兼容性：是否能从旧版本升级上来？版本升级的兼容性重点可以考虑录像数据、外部接口（eSDK或Onvif等）、升级脚本、界面（不同款型/硬件形态是否要兼容）；安全性：如果新增模块，需要考虑与其他模块之间的通信安全、端口控制得当，如果涉及敏感信息，需要考虑加密手段；第三方软件可获得性：在初步拟订实现方案时，需要考虑是否涉及第三方软件（公司的或开源的），能否获得，能否满足公司二进制溯源要求等\n总之MKT的澄清只能体现需求内容的一小部分，如同冰山，水面以下的部分往往是大头，还需经验。这类经验需要深入开发底层，亲身经历公司开发过程中的种种问题才有较好的体验，我前两年长期务虚，很多底层的细节不熟悉，过程中也挖了不少坑。这应该也是公司需要从底层选拔骨干的原因。",
-			"settings":
-			{
-				"buffer_size": 1378,
-				"line_ending": "Unix",
-				"name": "Charter"
-			}
-		},
-		{
-			"file": "/Users/ronghuihe/Documents/code/lordofpomelo-master/game-server/devtools_agent_page/ViewportControl.js",
-			"settings":
-			{
-				"buffer_size": 5045,
-				"line_ending": "Unix"
-			}
 		}
 	],
-	"build_system": "Packages/Go Build/Go.sublime-build",
+	"build_system": "Packages/User/c.sublime-build",
 	"command_palette":
 	{
 		"height": 392.0,
@@ -221,7 +204,12 @@
 	},
 	"file_history":
 	[
+		"/Users/ronghuihe/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/ronghuihe/Library/Application Support/Sublime Text 2/Packages/GoSublime/USAGE.md",
+		"/Users/ronghuihe/Documents/code/practice/poj/1002.c",
+		"/Users/ronghuihe/Documents/code/practice/poj/1003.c",
+		"/Users/ronghuihe/Documents/code/lordofpomelo-master/game-server/devtools_agent_page/ViewportControl.js",
+		"/Users/ronghuihe/Documents/code/practice/poj/1004.c",
 		"/Users/ronghuihe/Documents/code/practice/poj/1001.c",
 		"/Users/ronghuihe/Documents/code/coastline-server/coastline-server-go/src/server_main/server.go",
 		"/Users/ronghuihe/Library/Application Support/Sublime Text 2/Packages/GoSublime/CHANGELOG.md",
@@ -353,23 +341,23 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "1003.c",
+					"file": "1005.c",
 					"settings":
 					{
-						"buffer_size": 2053,
+						"buffer_size": 2800,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1394,
-								1336
+								2202,
+								2202
 							]
 						],
 						"settings":
@@ -400,13 +388,10 @@
 									}
 								}
 							},
+							"codeintel_database_dir": "~/.codeintel",
 							"codeintel_enabled_languages":
 							[
 								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
 								"SCSS",
 								"Python",
 								"HTML",
@@ -414,19 +399,66 @@
 								"Python3",
 								"XML",
 								"Sass",
-								"XSLT",
-								"Django",
 								"HTML5",
 								"Perl",
 								"CSS",
 								"Twig",
 								"Less",
-								"Smarty",
 								"Node.js",
-								"Tcl",
 								"TemplateToolkit",
 								"PHP"
 							],
+							"codeintel_exclude_scopes_from_complete_triggers":
+							[
+								"comment"
+							],
+							"codeintel_language_settings":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_exclude_dir":
+									[
+										"/build/",
+										"/min/"
+									],
+									"codeintel_scan_extra_dir":
+									[
+									],
+									"codeintel_scan_files_in_project": false,
+									"codeintel_selected_catalogs":
+									[
+										"jQuery"
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 15.0,
+									"codeintel_scan_exclude_dir":
+									[
+										"/Applications/MAMP/bin/php/php5.5.3/"
+									],
+									"codeintel_scan_extra_dir":
+									[
+									],
+									"codeintel_scan_files_in_project": true,
+									"php": "/Applications/MAMP/bin/php/php5.5.3/bin/php"
+								},
+								"Python3":
+								{
+									"codeintel_scan_extra_dir":
+									[
+										"/Applications/Sublime Text.app/Contents/MacOS",
+										"~/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/arch",
+										"~/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/libs"
+									],
+									"codeintel_scan_files_in_project": true,
+									"codeintel_selected_catalogs":
+									[
+									],
+									"python3": "/usr/local/bin/python3.3"
+								}
+							},
 							"codeintel_live": true,
 							"codeintel_live_enabled_languages":
 							[
@@ -457,27 +489,166 @@
 							],
 							"codeintel_max_recursive_dir_depth": 10.0,
 							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
+							[
+							],
 							"codeintel_scan_files_in_project": true,
 							"codeintel_selected_catalogs":
 							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
 							],
-							"codeintel_snippets": true,
+							"codeintel_snippets": false,
 							"codeintel_syntax_map":
 							{
 								"Python Django": "Python"
 							},
 							"codeintel_tooltips": "popup",
+							"codeintel_word_completions": "buffer",
 							"sublime_auto_complete": true,
+							"syntax": "Packages/C++/C.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 231.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "1050.c",
+					"settings":
+					{
+						"buffer_size": 1775,
+						"regions":
+						{
+							"edited_rgn":
+							{
+								"flags": 144,
+								"icon": "../AndyEdits/icon",
+								"regions":
+								[
+									[
+										936,
+										967
+									]
+								],
+								"scope": "comment"
+							},
+							"edited_rgns":
+							{
+								"flags": 144,
+								"icon": "../AndyEdits/icon",
+								"regions":
+								[
+									[
+										0,
+										545
+									],
+									[
+										547,
+										1775
+									]
+								],
+								"scope": "class"
+							}
+						},
+						"selection":
+						[
+							[
+								365,
+								365
+							]
+						],
+						"settings":
+						{
+							"codeintel": true,
+							"codeintel_database_dir": "~/.codeintel",
+							"codeintel_enabled_languages":
+							[
+								"JavaScript",
+								"SCSS",
+								"Python",
+								"HTML",
+								"Ruby",
+								"Python3",
+								"XML",
+								"Sass",
+								"HTML5",
+								"Perl",
+								"CSS",
+								"Twig",
+								"Less",
+								"Node.js",
+								"TemplateToolkit",
+								"PHP"
+							],
+							"codeintel_exclude_scopes_from_complete_triggers":
+							[
+								"comment"
+							],
+							"codeintel_language_settings":
+							{
+								"JavaScript":
+								{
+									"codeintel_max_recursive_dir_depth": 2.0,
+									"codeintel_scan_exclude_dir":
+									[
+										"/build/",
+										"/min/"
+									],
+									"codeintel_scan_extra_dir":
+									[
+									],
+									"codeintel_scan_files_in_project": false,
+									"codeintel_selected_catalogs":
+									[
+										"jQuery"
+									]
+								},
+								"PHP":
+								{
+									"codeintel_max_recursive_dir_depth": 15.0,
+									"codeintel_scan_exclude_dir":
+									[
+										"/Applications/MAMP/bin/php/php5.5.3/"
+									],
+									"codeintel_scan_extra_dir":
+									[
+									],
+									"codeintel_scan_files_in_project": true,
+									"php": "/Applications/MAMP/bin/php/php5.5.3/bin/php"
+								},
+								"Python3":
+								{
+									"codeintel_scan_extra_dir":
+									[
+										"/Applications/Sublime Text.app/Contents/MacOS",
+										"~/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/arch",
+										"~/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/libs"
+									],
+									"codeintel_scan_files_in_project": true,
+									"codeintel_selected_catalogs":
+									[
+									],
+									"python3": "/usr/local/bin/python3.3"
+								}
+							},
+							"codeintel_live": true,
+							"codeintel_max_recursive_dir_depth": 10.0,
+							"codeintel_scan_exclude_dir":
+							[
+							],
+							"codeintel_scan_files_in_project": true,
+							"codeintel_selected_catalogs":
+							[
+							],
+							"codeintel_snippets": false,
+							"codeintel_syntax_map":
+							{
+								"Python Django": "Python"
+							},
+							"codeintel_tooltips": "popup",
+							"codeintel_word_completions": "buffer",
 							"syntax": "Packages/C++/C.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
@@ -489,7 +660,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 2,
 					"file": "/Users/ronghuihe/Library/Application Support/Sublime Text 2/Packages/GoSublime/USAGE.md",
 					"settings":
 					{
@@ -508,324 +679,6 @@
 						{
 							"syntax": "Packages/Markdown/Markdown.tmLanguage",
 							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "1004.c",
-					"settings":
-					{
-						"buffer_size": 1580,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1187,
-								1187
-							]
-						],
-						"settings":
-						{
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2.0,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5.0,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": true,
-							"codeintel_live_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_max_recursive_dir_depth": 10.0,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"sublime_auto_complete": true,
-							"syntax": "Packages/C++/C.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 66.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "1002.c",
-					"settings":
-					{
-						"buffer_size": 4305,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2513,
-								2455
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 731.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"settings":
-					{
-						"buffer_size": 1378,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1378,
-								1378
-							]
-						],
-						"settings":
-						{
-							"auto_name": "Charter",
-							"codeintel": true,
-							"codeintel_config":
-							{
-								"JavaScript":
-								{
-									"codeintel_max_recursive_dir_depth": 2.0,
-									"codeintel_scan_files_in_project": false,
-									"javascriptExtraPaths":
-									[
-									]
-								},
-								"PHP":
-								{
-									"codeintel_max_recursive_dir_depth": 5.0,
-									"codeintel_scan_files_in_project": false,
-									"phpExtraPaths":
-									[
-									]
-								},
-								"Python":
-								{
-									"env":
-									{
-									}
-								}
-							},
-							"codeintel_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_live": true,
-							"codeintel_live_enabled_languages":
-							[
-								"JavaScript",
-								"Mason",
-								"XBL",
-								"XUL",
-								"RHTML",
-								"SCSS",
-								"Python",
-								"HTML",
-								"Ruby",
-								"Python3",
-								"XML",
-								"Sass",
-								"XSLT",
-								"Django",
-								"HTML5",
-								"Perl",
-								"CSS",
-								"Twig",
-								"Less",
-								"Smarty",
-								"Node.js",
-								"Tcl",
-								"TemplateToolkit",
-								"PHP"
-							],
-							"codeintel_max_recursive_dir_depth": 10.0,
-							"codeintel_scan_exclude_dir":
-							{
-								"JavaScript":
-								[
-									"/build/",
-									"/min/"
-								]
-							},
-							"codeintel_scan_files_in_project": true,
-							"codeintel_selected_catalogs":
-							[
-								"PyWin32",
-								"jQuery",
-								"Rails"
-							],
-							"codeintel_snippets": true,
-							"codeintel_syntax_map":
-							{
-								"Python Django": "Python"
-							},
-							"codeintel_tooltips": "popup",
-							"sublime_auto_complete": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/Users/ronghuihe/Documents/code/lordofpomelo-master/game-server/devtools_agent_page/ViewportControl.js",
-					"settings":
-					{
-						"buffer_size": 5045,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
